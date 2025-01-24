@@ -47,7 +47,13 @@
           "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
-          "namedChunks": true
+          "namedChunks": true,
+          "fileReplacements": [
+            {
+              "replace": "apps/ecommerce-store/src/environments/environment.ts",
+              "with": "apps/ecommerce-store/src/environments/environment.development.ts"
+            }
+          ]
         }
       },
       "defaultConfiguration": "production"
@@ -61,6 +67,9 @@
         "development": {
           "buildTarget": "ecommerce-store:build:development"
         }
+      },
+      "options": {
+        "proxyConfig": "apps/ecommerce-store/src/proxy.conf.js"
       },
       "defaultConfiguration": "development"
     },
